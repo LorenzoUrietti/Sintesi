@@ -1,0 +1,188 @@
+* {box-sizing:border-box}
+
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+background: black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: blue;
+border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-track:hover {
+background: white;
+}
+
+body { margin: 0; padding: 0; background-color: black;}
+#map { position: absolute; top: 0; bottom: 0; width: 100%; z-index:-10;}
+button{text-decoration: none; padding:10px 20px 10px 20px; border-radius: 30px; border:none; transition: 0.3s; cursor: pointer;}
+button:hover{transform: scale(1.1)} 
+
+.marker {
+    display: block;
+    border: none;
+    border-radius: 0%;
+    cursor: pointer;
+    padding: 0;
+    z-index: 5;
+}
+
+.pop{
+    position:fixed; 
+    top:0%; right:0%; bottom:0%;
+    height:100%; width:40%; 
+    padding: 20px;
+    z-index: 10; 
+    background: black;
+    box-shadow: 200px 200px 200px 200px #000000};
+
+
+.pop p{
+    font-size: 30px;
+}
+.anteprima{
+    position:absolute; 
+    top:0%;left:0;
+    width:100%; height:100%; 
+    background: url(''); 
+    z-index:-100;
+    background-color: aqua;
+    overflow:hidden;
+}
+.ant-video{
+    z-index: -200;
+}
+
+.close-btn{
+    position:absolute; 
+    top:2%; right:2%;
+    width:8%; height:5%; 
+    background: url(''); 
+    z-index:99;
+    cursor:pointer;
+}
+.close-btn img{
+    transition: 0.2s;
+}
+.close-btn:hover img{
+    transform:  scale(0.5) rotate(10deg);
+}
+
+.article-btn{
+    position:absolute; 
+    bottom:15%; right:10%;
+    width:10%; height:7%; 
+    background: url(''); 
+    z-index:99;
+    background-color: white;
+    padding:5px;   
+}
+
+.title-container{
+    position:absolute; 
+    padding:50px;
+    padding-top: 10px;
+    bottom:0;left:0;
+    width:100%; height:50%; 
+    background: url(''); 
+    z-index:99;
+    background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    color: white;
+}
+
+.via{
+    position:absolute; 
+    padding-top: 10px;
+    padding:50px;
+    bottom:20;left:0;
+    width:100%; height:20%; 
+    z-index:300;
+}
+
+.via-txt{
+    font-size: 10px;
+}
+
+.title h1{
+    font-size: 60px;
+    line-height: 0px;
+}
+.title-container p{
+    font-size: 20px;
+}
+
+.show{
+    animation: showw 0.8s forwards;
+}
+.hide{
+    animation: disappear 0.6s forwards;
+}
+.hidenow{
+    display:none
+}
+
+.showl{
+    animation: showwl 0.8s forwards;
+}
+.hidel{
+    animation: disappearl 0.6s forwards; 
+}
+
+@keyframes showw {
+0% {right:-100%;}
+100% {opacity: 1;} 
+}
+@keyframes disappear {
+0% {opacity: 1;}
+100% {right:-100%; display: none;}
+}
+
+@keyframes showwl {
+0% {bottom:-100%; opacity:0;}
+100% {opacity: 1; bottom:8vh;} 
+}
+@keyframes disappearl {
+0% {opacity: 1; bottom:8vh;}
+100% {bottom:-100%; opacity: 0;}
+}
+
+#mobile{
+    display: none; background: blue; padding: 30 30 30 30;
+}
+
+@media (max-width:400px) {
+    #desktop{display: none;}
+    #mobile{display: block; padding:30px}
+    body{background: blue;}
+}
+.epl{
+    position:absolute; right:0%; height:92%; width:40%; text-align:center; z-index: 10; overflow-y: scroll;
+}
+#epList{
+    background: white; padding:10px 10px 0px 10px;
+}
+#fixednav{
+    position: sticky; z-index:1; display: block; width:100%; top:0%; padding: 20px 0px 20px 0px; margin-top: 10px;
+}
+.ep_container{
+    position:relative; height:45%; width:100%; background: white; margin-top: 10px; opacity: 0.5;
+}
+.ep_container .imgl {
+    position: absolute; display: inline-block; left:0%; height:100%; width: 30%; background: blue;
+}
+.exit {
+    background: red; margin-top:30%; left:4%;
+}
+.ep_container:last-child {
+    border-bottom: none;
+    margin-bottom: 300px;
+}
+.ep_container.active {
+    opacity: 1;
+}
