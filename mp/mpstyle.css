@@ -1,0 +1,78 @@
+.music-container{
+    background-color: black;
+    width:100%;
+    height:45px;
+    padding: 12px 8px 0px 8px;
+    color: #eaeadd;
+}
+
+.music-container h4, p {
+    margin:0;
+    margin-top: 0.3em;
+    font-size: 0.7em;
+}
+
+.navigation {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    z-index:1;
+    margin-right: 80px;
+    margin-bottom:5px;
+}
+
+.action-btn {
+    color:#eaeadd;
+    background-color: black;
+    border:0;
+    cursor:pointer;
+    padding: 2px;
+    margin: 0 10px;
+    font-size: 0.5em;
+    transition:0.3s;
+}
+
+.music-info{
+    margin-top:-3px; display:none;
+}
+
+.fab{
+    color: #eaeadd;
+    background-color: rgba(red, green, blue, 0);
+    transform: scale(1.5); 
+}
+
+#spotify{
+    float: right;
+}
+
+.action-btn:hover{
+    transform:scale(1.1)
+}
+
+.action-btn-big {
+    font-size: 0.7em;
+}
+
+.progress-container{
+    float:left;
+    clear:left;
+    cursor:pointer;
+    margin: 0px;
+    margin-left: -8px;
+    margin-left: -8px;
+    margin-top: 4px;
+    background-color: #000;
+    width: 100%;
+    height:2px;
+}
+
+.progress{
+    background-color: #90ff81;
+    margin:0px;
+    height:100%;
+    width:0%;
+    transition: width 0.1s linear;
+    z-index: 2;
+}
