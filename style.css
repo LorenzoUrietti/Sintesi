@@ -1,0 +1,148 @@
+*{box-sizing: border-box}
+
+
+body{
+    background: black;
+    margin:0;
+    
+}
+
+.header-title{
+    position:fixed;
+    top:-2%;
+    left:-2%;
+    transform: scale(0.4) translate(-50%, -50%);
+}
+
+.central-logo{
+    transform: scale(0.8);
+    display: flex;
+    justify-self: center;
+    z-index: 2;
+    margin: 0;
+}
+
+h4{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform:uppercase;
+    font-size: 0.7em;
+    transition:0.7s;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+#season{
+    text-align:center;
+    font-size: 4vw;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:900;
+    margin-top: 0%;
+    z-index: 2;
+}
+
+.landing-bg{
+    position:fixed;
+    height:100%;
+    width:100%;
+    top:0; left:0;
+    z-index: 0;
+}
+
+#bg-video{
+    position: fixed;
+    top: -10%;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    filter:grayscale(100%)
+}
+
+
+.landing-menu{
+    background: #eaeadd;
+    border-top: 1px solid #000000;
+    position:fixed;
+    height:18%;
+    width:100%;
+    bottom: 40px;; left:0;
+    float: left;
+}
+
+.initial-menu-item{
+    border-right: 1px solid #000000;
+    height:100%;
+    float: left;
+    transition: 0.7s;
+    margin:0px;
+    padding-left: 20px;
+    padding-top: 0px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.initial-menu-item:hover h4{
+    letter-spacing: 6px;
+    
+}
+
+#map-link{
+    width: 60%;
+    background: url('img/landing/csacsa.png') bottom center no-repeat;
+    background-size: 500px 130px;
+    background-attachment: fixed;
+}
+
+#map-link:hover{
+    background-color: #90ff81;
+    background-size: 600px 180px;
+}
+
+#info-link{
+    width: 20%;
+    background: url('img/landing/vwebiazscnk.png') bottom right no-repeat;
+    background-size: 110px 110px;
+    background-attachment: fixed;
+}
+
+#info-link:hover{
+    background-color: #90ff81;
+    background-size: 120px 120px;
+}
+
+#origins-link{
+    width: 20%;
+    background: url('img/landing/5cc1f41a24000036007750bc.png') bottom left no-repeat;
+    background-size: 110px 110px;
+    background-attachment: fixed;
+}
+
+#origins-link:hover{
+    background-color: #90ff81;
+    background-size: 120px 120px;
+}
+
+.base-footer{
+    position: fixed;
+    bottom:0;
+    margin:0;
+    left:0;
+    height: 40px;
+    width:100%;
+    background: black;
+    z-index: 20;
+}
+.player{
+    bottom:0;
+    margin:0;
+}
+
+.marker{
+    transition: 0.3s;
+}
