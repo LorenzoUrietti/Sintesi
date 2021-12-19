@@ -53,12 +53,8 @@ mapboxgl.accessToken = 'pk.eyJ1Ijoia3ViYWJsYXN6Y3p5a293c2tpIiwiYSI6ImNrd3FoeXJib
         interactive: true,
         zoom: 17, // starting zoom
         antialias: true,
-        pitch:75,
-
     });
  
-
-
     const routes = {
       target: [
           [6.56158447265625, 46.059891147620725],
@@ -99,30 +95,15 @@ data: {
 }
 }
 });
-map.addLayer({
-type: 'line',
-source: 'trace',
-id: 'line',
-paint: {
-'line-color': 'orange',
-'line-width': 0
-},
-layout: {
-'line-cap': 'round',
-'line-join': 'round'
-}
-});
 });
  
 // wait for the terrain and sky to load before starting animation
 map.on('load', () => {
-const animationDuration = 80000;
+const animationDuration = 30000;
 const cameraAltitude = 4000;
 // get the overall distance of each route so we can interpolate along them
 const routeDistance = turf.lineDistance(turf.lineString(targetRoute));
-const cameraRouteDistance = turf.lineDistance(
-turf.lineString(cameraRoute)
-);
+const cameraRouteDistance = turf.lineDistance(turf.lineString(cameraRoute));
  
 let start;
  
@@ -163,13 +144,16 @@ lat: alongCamera[1]
 },
 cameraAltitude
 );
- 
+
+camera.setPitchBearing(40, 0);
+
 // tell the camera to look at a point along the route
 camera.lookAtPoint({
 lng: alongRoute[0],
 lat: alongRoute[1]
 });
- 
+
+
 map.setFreeCameraOptions(camera);
  
 window.requestAnimationFrame(frame);

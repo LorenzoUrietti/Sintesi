@@ -174,49 +174,126 @@ const geojsonArray = geojson.features;
         'address': 'Ripa di Porta Ticinese 83',
       },
       {
-        'type': 'b3',
+        'type': 'New Kary',
         'properties': {
           'iconSize': [24,26]
         },
         'geometry': {
           'type': 'Point',
-          'coordinates': [9.181, 45.446]
+          'coordinates': [9.183793821623322,45.46119131067335]
         },
-        'path': 'img/map/marker2/il.png'
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
       },
       {
-        'type': 'b4',
+        'type': 'Via Scaldasole',
         'properties': {
           'iconSize': [24,26]
         },
         'geometry': {
           'type': 'Point',
-          'coordinates': [9.18, 45.4435]
+          'coordinates': [9.179643347959454,45.45441810571858]
         },
-        'path': 'img/map/marker2/ill.png'
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
       },
       {
-        'type': 'b5',
+        'type': 'Viale Gorizia',
         'properties': {
           'iconSize': [24,26]
         },
         'geometry': {
           'type': 'Point',
-          'coordinates': [9.179, 45.4465]
+          'coordinates': [9.176077678778984, 45.453182403845965 ]
         },
-        'path': 'img/map/marker2/il.png'
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
       },
       {
-        'type': 'b6',
+        'type': 'Via Torricelli 3',
         'properties': {
           'iconSize': [24,26]
         },
         'geometry': {
           'type': 'Point',
-          'coordinates': [9.1814, 45.445]
+          'coordinates': [ 9.179245901824002, 45.44611605705023]
         },
-        'path': 'img/map/marker2/ill.png'
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
       },    
+      {
+        'type': 'Via Torricelli 19',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [9.177326009474985, 45.44435591009226]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },   
+      {
+        'type': 'Via Pavia 19',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [9.179491236607493, 45.44780992128515]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },   
+      {
+        'type': 'Tutto Per Operai',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [9.171263590498352, 45.451144613754344]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },
+      {
+        'type': 'La Fiera di Senigallia',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [ 9.171814330516234,45.45115386428098]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },
+      {
+        'type': 'Via Gentilino',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [9.181176745319178, 45.449091607211955]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },
+      {
+        'type': 'Alzaia Naviglio Pavese 22',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [9.17777269050508, 45.449390659136434]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },     
+      {
+        'type': 'Santa Marta',
+        'properties': {
+          'iconSize': [24,26]
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [9.183573119140243, 45.46171078293023 ]
+        },
+        'path': 'img/map/marker2/Leoncavallo_Milano-kMZD-U43030365222380ed-1224x916@Corriere-Web-Milano-593x443.jpg'
+      },
     ]
   };
 
@@ -240,7 +317,7 @@ const geojsonArray = geojson.features;
       el.style.zIndex= `${zindex}`;
       //el.style.transition = `0.05s`; la transizione fa laggare i marker
   // Funzione al click dei marker
-      el.addEventListener('click', () => {
+      el.addEventListener('click', () => { 
         map.flyTo({
           center: [marker.geometry.coordinates[0]+0.0026, marker.geometry.coordinates[1]], 
           essential: true,
@@ -288,39 +365,37 @@ const geojsonArray = geojson.features;
         const path = marker.path;
         const width = marker.properties.iconSize[0];
         const height = marker.properties.iconSize[1];
+        const name = marker.type;
           el.className = 'marker2';
-          el.style.backgroundImage = `url('${path}')`;
-          el.style.width = `60px`;
-          el.style.height = `60px`;
+          el.style.backgroundImage = `url('img/map/marker2/SantaMarta_Mod.png')`;
+          el.style.width = `35px`;
+          el.style.height = `35px`;
           el.style.backgroundSize = '100%';
           el.style.borderRadius = '60px';
-          el.style.zIndex= `30`;
+          el.style.zIndex= `3`;
           el.style.cursor='pointer';
+          el.style.border='3px solid #97ba00';
       // Funzione al click dei marker
           el.addEventListener('click', () => {
               //piazza il popup
           });
       // Funzione hover marker
           el.addEventListener('mouseover',() => {
-            el.style.width = `70px`;
-            el.style.height = `70px`;
+            el.style.width = `40px`;
+            el.style.height = `40px`;
           })
           el.addEventListener('mouseout',() => {
-            el.style.width = `60px`;
-            el.style.height = `60px`;
+            el.style.width = `35px`;
+            el.style.height = `35px`;
           })
-          const popupmin = new mapboxgl.Popup({ offset: 25 }).setText(
-            'Construction on the Washington Monument began in 1848.'
-            );
+          const popupmin = new mapboxgl.Popup({ offset: 25 }).setHTML(
+            name 
+            )
+   
     // Add markers to the map.
         new mapboxgl.Marker(el)
           .setLngLat(marker.geometry.coordinates)
-          .setPopup(
-            new mapboxgl.Popup({ offset: 25 }) // add popups
-              .setHTML(
-                `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
-              )
-          )
+          .setPopup(popupmin)
           .addTo(map);
       }
 
@@ -339,7 +414,6 @@ const geojsonArray = geojson.features;
       stato0--;
       document.getElementById('address').innerHTML = '';
     } 
-    
   }
   function funzionepop1() {
     let popup = document.getElementById("popup1");

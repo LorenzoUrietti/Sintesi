@@ -9,9 +9,9 @@ body{
 
 .header-title{
     position:fixed;
-    top:-2%;
-    left:-2%;
-    transform: scale(0.4) translate(-50%, -50%);
+    top:-10%;
+    left:-4%;
+    transform: scale(0.25) translate(-50%, -50%);
 }
 
 .central-logo{
